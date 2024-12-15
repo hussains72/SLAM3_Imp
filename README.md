@@ -1,6 +1,6 @@
-# ORB-SLAM3 
-install and run the ORBSLAM3 WITH ROS1 and REALSENSE D435i camera
-Tested on Ubuntu 20.04
+# ORB-SLAM3 for ROS Noetic-- A Stable and Matured Implementation
+
+install and run the ORBSLAM3 WITH ROS1 and REALSENSE D435i camera  on Ubuntu 20.04
 # Configuration Version info
 -ubuntu 20.04  
 -ROS1  
@@ -50,7 +50,7 @@ sudo ./b2 install
 ```
 sudo apt install libpython2.7-dev
 ```
-# 3. Building ORB-SLAM3 library and examples
+## 3. Building ORB-SLAM3 library and examples
 
 Clone the repository:
 ```
@@ -67,13 +67,13 @@ cd SLAM3_Imp
 chmod +x build_ros.sh
 ./build.sh
 ```
-# 4. Add ROS environment
+## 4. Add ROS environment
 ```
 sudo gedit ~/.bashrc
 export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/sajid/SLAM3_Imp/Examples_old/ROS
 source ~/.bashrc
 ```
-# 5. install librealsense and the ROS wrapper for Ubuntu 20.04 (with ROS Noetic) from source
+## 5. install librealsense and the ROS wrapper for Ubuntu 20.04 (with ROS Noetic) from source
 
 install dependencies
 ```
@@ -118,7 +118,7 @@ Test the ROS wrapper
 roslaunch realsense2_camera rs_camera.launch
 ```
 
-# 6. Running ORB-SLAM3 with realsense d435i camera
+## 6. Running ORB-SLAM3 with realsense d435i camera
 monocular node
 
 ```
@@ -129,4 +129,4 @@ RGBD node
 rosrun ORB_SLAM3 RGBD Vocabulary/ORBvoc.txt Examples/RGB-D/TUM1.yaml
 ```
 
-`
+
