@@ -1,6 +1,5 @@
 # ORB-SLAM3 
-install and run the ORBSLAM3
-ORB-SLAM WITH ROS1 and REALSENSE D435i camera
+install and run the ORBSLAM3 WITH ROS1 and REALSENSE D435i camera
 Tested on Ubuntu 20.04
 # Configuration Version info
 ubuntu 20.04
