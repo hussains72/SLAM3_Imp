@@ -2,12 +2,12 @@
 install and run the ORBSLAM3 WITH ROS1 and REALSENSE D435i camera
 Tested on Ubuntu 20.04
 # Configuration Version info
-ubuntu 20.04
-ROS1
-Pangolin 0.6
-Eigen 3
-Opencv 4.2
-C++14 Compiler
+-ubuntu 20.04  
+-ROS1  
+-Pangolin 0.6  
+-Eigen 3  
+-Opencv 4.2  
+-C++14 Compiler  
 
 # 1. Prerequisites
 
