@@ -58,13 +58,8 @@ git clone https://github.com/hussains72/SLAM3_Imp.git
 ```
 
 ```
-cd SLAM3_Imp
+cd ~/SLAM3_Imp
 chmod +x build.sh
-./build.sh
-```
-```
-cd SLAM3_Imp
-chmod +x build_ros.sh
 ./build.sh
 ```
 ## 4. Add ROS environment
@@ -73,6 +68,12 @@ sudo gedit ~/.bashrc
 export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/sajid/SLAM3_Imp/Examples_old/ROS
 source ~/.bashrc
 ```
+```
+cd ~/SLAM3_Imp
+chmod +x build_ros.sh
+./build_ros.sh
+```
+
 ## 5. install librealsense and the ROS wrapper for Ubuntu 20.04 (with ROS Noetic) from source
 
 install dependencies
@@ -81,6 +82,8 @@ sudo apt update && sudo apt upgrade
 sudo apt install git cmake build-essential libssl-dev libusb-1.0-0-dev pkg-config libgtk-3-dev libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev
 sudo apt install ros-noetic-catkin python3-catkin-tools python3-pip
 pip3 install -U setuptools
+sudo apt-get install ros-noetic-ddynamic-reconfigure
+
 ```
 Install librealsense from Source
 ```
@@ -100,6 +103,7 @@ realsense-viewer
 ```
 Install ROS Wrapper for RealSense from Source
 ```
+mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 git clone https://github.com/IntelRealSense/realsense-ros.git
 cd realsense-ros
@@ -119,6 +123,13 @@ roslaunch realsense2_camera rs_camera.launch
 ```
 
 ## 6. Running ORB-SLAM3 with realsense d435i camera
+Before running the node check 
+```
+echo $ROS_PACKAGE_PATH
+```
+/home/sajid/SLAM3_Imp/Examples_old/ROS:/home/sajid/catkin_ws/src:/opt/ros/noetic/share
+
+
 monocular node
 
 ```
